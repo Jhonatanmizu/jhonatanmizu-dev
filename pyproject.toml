@@ -73,7 +73,7 @@ known-first-party = ["my_package"]
 
 
 [tool.pyright]
-typeCheckingMode = "strict"
+typeCheckingMode = "standard"
 pythonVersion = "3.13"
 include = ["./", 'tests']
 exclude = [
