@@ -25,20 +25,29 @@ SECRET_KEY = "django-insecure-^1i!bu94a3)n6z2c@wvu!ju#*zcej3((39du%t4*72=n!y&rf9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["e14e0a193b46.ngrok-free.app"]
 
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "blog"
 ]
+
+LOCAL_APPS = [
+    "blog",
+]
+
+THIRD_PARTY_APPS = [
+    "compressor",
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -117,7 +126,14 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATICFILES_FINDERS = [
+    "compressor.finders.CompressorFinder",
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Compressor settings
+COMPRESS_ROOT = BASE_DIR / "static"
+COMPRESS_ENABLED = True
