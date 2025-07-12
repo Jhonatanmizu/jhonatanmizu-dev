@@ -1,9 +1,44 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-  {% include 'blog/partials/_header.html' %}
-  {% include 'blog/partials/_navbar.html' %}
-  <div class="container is-fluid has-background-primary">
-    <h1>Hadouken</h1>
+  <div class="max-w-7xl mx-auto py-4 max-sm:px-4">
+    {% include 'blog/partials/_header.html' %}
+    {% include 'blog/partials/_navbar.html' %}
+    {% comment %}MAIN{% endcomment %}
+    <main class="min-h-[30rem] flex justify-center items-center">
+      <section class="flex flex-col gap-6">
+        <div class="text-center flex flex-col gap-2">
+          <h1 class="text-4xl poppins-medium">Jhonatanmizu</h1>
+          <h2 class="text-3xl poppins-bold text-color-primary">Fullstack Engineer</h2>
+        </div>
+        <p class="text-base poppins">Dynamic Full Stack Software Developer & UI/UX Design with over 4 years of experience in application development and user experience design, expert in React and Python.</p>
+      </section>
+    </main>
+    {% comment %}MAIN{% endcomment %}
+    {% comment %}Skills{% endcomment %}
+    <section class="min-h-[30rem] flex flex-col background-color-primary-bg rounded-2xl p-4 justify-between mb-10">
+      <div class="flex flex-col gap-8">
+        <h3 class="text-3xl poppins-bold">Engineering</h3>
+        <p class="text-base">Dynamic Full Stack Software Developer & UI/UX Design with over 4 years of experience in application development and user experience design, expert in React and Python.</p>
+      </div>
+      <div class="flex flex-col gap-8">
+        <h3 class="text-3xl poppins-bold">Design</h3>
+        <p class="text-base">Dynamic Full Stack Software Developer & UI/UX Design with over 4 years of experience in application development and user experience design, expert in React and Python.</p>
+      </div>
+    </section>
+    {% comment %}Skills{% endcomment %}
+    <section class="min-h-[30rem]">
+      <h2 class="poppins-medium text-4xl mb-4">About me</h2>
+      <div class="flex flex-col gap-6">
+        <p class="poppins-medium text-xl">
+          <span class="text-color-primary">Hello</span>, my name is Jhonatan, I`m 4 years experienced Fullstack engineer and UI/UX Design
+        </p>
+        <div class="flex flex-col gap-8">
+          <p class="poppins text-base">Software Developer ☕️💻Fueled by coffee and a passion for crafting digital solutions, I specialize in JavaScript/TypeScript (since 2020) and thrive at the intersection of creativity and technology. Currently, I’m building innovative financial solutions at @Midway, a fast-growing Brazilian fintech, where I leverage cutting-edge tools to solve real-world problems.</p> <p class="poppins text-base"></p>
+
+          <p class="poppins text-base">My key achievements include the successful development of a customer relationship manager that incorporates real-time chat features, and a comprehensive medication management application tailored for elderly users that enhanced user engagement by 30%.</p>
+        </div>
+      </div>
+    </section>
   </div>
 {% endblock %}
