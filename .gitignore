@@ -11,3 +11,5 @@ wheels/
 
 # Sqlite3 databases
 *.sqlite3
+node_modules/
+CACHE/
