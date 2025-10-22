@@ -36,7 +36,7 @@ INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 # ---------------------------------------------------------------------
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # ✅ must be right here
+    "whitenoise.middleware.WhiteNoiseMiddleware",  
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -91,23 +91,16 @@ USE_TZ = True
 # ---------------------------------------------------------------------
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [BASE_DIR / "static"]  # ✅ include your local static dir
+STATICFILES_DIRS = [BASE_DIR / "static"]  
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_FINDERS = [
-    "django.contrib.staticfiles.finders.FileSystemFinder",     # ✅ required
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder", # ✅ required
-    "compressor.finders.CompressorFinder",                     # compressor last
+    "django.contrib.staticfiles.finders.FileSystemFinder",     
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    # "compressor.finders.CompressorFinder",                     
 ]
 
-# ---------------------------------------------------------------------
-# DJANGO COMPRESSOR
-# ---------------------------------------------------------------------
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
-COMPRESS_ROOT = BASE_DIR / "static"
-COMPRESS_URL = STATIC_URL
 
 # ---------------------------------------------------------------------
 # SECURITY (Render production)
