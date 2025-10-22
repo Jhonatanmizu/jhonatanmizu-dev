@@ -13,3 +13,5 @@ wheels/
 *.sqlite3
 node_modules/
 CACHE/
+staticfiles
+./staticfiles
