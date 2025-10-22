@@ -105,6 +105,7 @@ STATICFILES_FINDERS = [
 # DJANGO COMPRESSOR
 # ---------------------------------------------------------------------
 COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
 COMPRESS_ROOT = BASE_DIR / "static"
 COMPRESS_URL = STATIC_URL
 
