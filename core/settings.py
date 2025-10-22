@@ -129,6 +129,9 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 STATICFILES_FINDERS = [
     "compressor.finders.CompressorFinder",
 ]
@@ -140,3 +143,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Compressor settings
 COMPRESS_ROOT = BASE_DIR / "static"
 COMPRESS_ENABLED = True
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
